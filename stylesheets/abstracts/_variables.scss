@@ -1,0 +1,108 @@
+//colors
+$primary-purple-color: #13183f;
+$faint-primary-purple-color: #666ca3;
+$gray-color: #83869a;
+$secondary-pink-color: #f74780;
+$secondary-pink-faint-color: #ffa7c3;
+$gradient-one-top: #ff6f48;
+$gradient-one-bottom: #f02aa6;
+$gradient-two-top: #4851ff;
+$gradient-two-bottom: #f02aa6;
+$white: #ffffff;
+
+.headingXL {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 50px;
+}
+
+.headingL {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 50px;
+}
+
+.headingM {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.headingS {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.bodyM {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.bodyS {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+//buttons
+@mixin btn($bacground) {
+  width: 167px;
+  height: 56px;
+  border-radius: 28px;
+  background: $bacground;
+}
+
+@mixin btn-gradient-one() {
+  @include gradient-one();
+}
+
+@mixin btn-gradient-two() {
+  @include gradient-two();
+}
+
+.button-one-idle {
+  @include btn($primary-purple-color);
+}
+
+.button-two-idle {
+  @include btn($primary-purple-color);
+}
+
+.button-three-idle {
+  @include btn($primary-purple-color);
+}
+
+.button-one-hover {
+  @include btn($primary-purple-color);
+}
+
+.button-two-hover {
+  @include btn($primary-purple-color);
+}
+
+.button-three-hover {
+  @include btn($primary-purple-color);
+}
+
+//layouts
+
+@mixin vertical-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin horizontal-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}

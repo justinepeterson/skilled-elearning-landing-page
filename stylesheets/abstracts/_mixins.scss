@@ -1,0 +1,27 @@
+@mixin logo {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+}
+
+@mixin button($background-color) {
+  border-radius: 2.8rem;
+  width: 14rem;
+  height: 4.8rem;
+  border: none;
+  background-color: $background-color;
+  color: $white;
+  font-size: 1.6rem;
+}
+
+@mixin primary-button {
+  @include button($primary-purple-color);
+}
+
+@mixin secondary-button {
+  @include button($secondary-pink-color);
+  background: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+  border-radius: 10px;
+}

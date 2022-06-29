@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer {
+  padding: 1.6rem;
+  margin-bottom: 0;
+  background: #13183F;
+  .footer-container {
+    height: 4.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      color: $white;
+      @include logo();
+    }
+
+    .btn-secondary-cta {
+      @include primary-button();
+      background: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+    }
+  }
+}

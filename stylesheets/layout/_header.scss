@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+header {
+  margin: 1.6rem;
+  margin-bottom: 0;
+  .header-container {
+    margin-bottom: 0;
+    height: 4.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      color: $primary-purple-color;
+      @include logo();
+    }
+
+    .btn-primary-cta {
+      @include primary-button();
+    }
+  }
+}
