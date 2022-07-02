@@ -2,17 +2,16 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 .hero {
-  padding: 0 1.6rem;
   h1 {
     font-weight: 800;
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 4rem;
+    line-height: 5rem;
     color: $primary-purple-color;
   }
   p {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
     color: $primary-purple-color;
   }
 
@@ -20,7 +19,7 @@
     @include secondary-button();
   }
 
-  .hero-image {
+  .hero-mobile-image {
     background: url(../../images/hero-mobile.png);
     background-repeat: no-repeat;
     background-position: center center;
@@ -41,10 +40,10 @@
       font-family: "Plus Jakarta Sans";
       font-style: normal;
       font-weight: 800;
-      font-size: 24px;
-      line-height: 32px;
+      font-size: 2.4rem;
+      line-height: 3.2rem;
       background: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
-      border-radius: 10px;
+      border-radius: 1rem;
       color: #ffffff;
       padding: 3rem 2.8rem;
     }
@@ -74,23 +73,29 @@
 @media only screen and (min-width: 400px) {
   .hero {
     padding: 0 0 0 1.6rem;
+    height: calc(100vh - 8rem);
     display: flex;
+    justify-content: space-between;
     .hero-desktop-left {
-      width: 50%;
+      width: 50vw;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
 
     .hero-desktop-right {
-      background: url(../../images/hero-tablet.png);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      height: 63rem;
-      width: 50%;
+      &::before {
+        content: "";
+        display: block;
+        width: 35rem;
+        height: 40rem;
+        background: url(../../images/hero-tablet.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
     }
-    .hero-image {
+    .hero-mobile-image {
       display: none;
     }
   }
@@ -116,3 +121,24 @@
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .hero {
+    padding-left: 12rem;
+  }
+
+  header {
+    padding: 0 10rem;
+  }
+
+  .courses {
+    padding: 0 16.5rem;
+  }
+
+  .footer {
+    padding: 1.6rem 12rem;
+  }
+  .courses {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+}
